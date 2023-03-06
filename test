@@ -1,0 +1,23 @@
+New Text Document (2).txt
+Tbshkkmvt100264
+yum install httpd -y
+systemctl start httpd
+yum install mariadb-server mariadb
+systemctl start mariadb
+mysql_secure_installation
+yum install php -y
+yum install php-mysql -y
+yum install epel* -y
+yum install phpmyadmin -y
+yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+yum -y install epel-release yum-utils
+yum-config-manager --disable remi-php54
+yum-config-manager --enable remi-php73
+yum -y install php php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json
+nano /etc/httpd/conf.d/phpMyadmin.conf
+<Directory /usr/share/phpMyAdmin/>
+	Options none
+	AllowOverride Limit
+	Require all granted
+</Directory>
+https://drive.google.com/file/d/1nbkZYphGwM1FbsQYO-BhggPzS37Xe-ro/view?usp=sharing
